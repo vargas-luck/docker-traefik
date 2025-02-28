@@ -1,8 +1,8 @@
+---
 
-```markdown
 # Projeto Base com Docker, PHP, MySQL, Traefik, phpMyAdmin e Redis
 
-Este é um projeto básico configurado para facilitar o desenvolvimento com Docker. Ele inclui serviços essenciais como PHP, MySQL, Traefik (para roteamento), phpMyAdmin (para gerenciamento do banco de dados) e Redis (para cache). A aplicação principal fica na pasta `src`, e todos os serviços são configurados usando o Docker Compose.
+Este é um projeto básico configurado para facilitar o desenvolvimento com **Docker**. Ele inclui serviços essenciais como **PHP**, **MySQL**, **Traefik** (para roteamento), **phpMyAdmin** (para gerenciamento do banco de dados) e **Redis** (para cache). A aplicação principal fica na pasta `src`, e todos os serviços são configurados usando o **Docker Compose**.
 
 > **Nota**: Este é um projeto "cru", ou seja, ele não inclui nenhuma aplicação pré-configurada. Ele serve apenas como base para ser usado em projetos PHP com suporte a banco de dados, cache e roteamento.
 
@@ -10,19 +10,23 @@ Este é um projeto básico configurado para facilitar o desenvolvimento com Dock
 
 ## Pré-requisitos
 
-- Docker instalado e funcionando no seu sistema.
-- Conhecimento básico de Docker e Docker Compose.
+Para utilizar este projeto, você precisará dos seguintes itens instalados e configurados no seu ambiente:
+
+- **Docker**: Instalado e funcionando corretamente no seu sistema.
+- **Conhecimento básico**: Familiaridade com **Docker** e **Docker Compose**.
 
 ---
 
 ## Estrutura do Projeto
 
+Abaixo está a estrutura de diretórios do projeto:
+
 ```
 /projeto
   /docker
-    /php         # Configuração do PHP
-    /mysql       # Configuração do MySQL
-    /traefik     # Configuração do Traefik
+    /php                     # Configuração do PHP
+    /mysql                   # Configuração do MySQL
+    /traefik                 # Configuração do Traefik
       /config
         traefik.yml          # Configuração estática do Traefik
         traefik_dynamic.yml  # Configuração dinâmica do Traefik
@@ -32,7 +36,18 @@ Este é um projeto básico configurado para facilitar o desenvolvimento com Dock
   docker-compose.yml         # Arquivo principal do Docker Compose
 ```
 
-Os arquivos da sua aplicação devem ser colocados na pasta `src`. Esta é uma configuração "crua" para ser usada como base em projetos PHP com suporte a banco de dados, cache e roteamento.
+---
+
+### Descrição dos Diretórios
+
+- **`/docker/php`**: Contém as configurações específicas para o serviço PHP.
+- **`/docker/mysql`**: Inclui arquivos de configuração e scripts iniciais para o MySQL.
+- **`/docker/traefik`**: Contém as configurações do Traefik, incluindo certificados SSL/TLS e regras de roteamento.
+- **`/src`**: Pasta onde o código-fonte da sua aplicação deve ser colocado.
+- **`/logs`**: Armazena os logs gerados pelos serviços.
+- **`docker-compose.yml`**: Arquivo principal que define e configura todos os serviços do projeto.
+
+---
 
 ---
 
