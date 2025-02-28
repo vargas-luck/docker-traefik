@@ -176,7 +176,3 @@ Exemplo:
 docker logs traefik
 ```
 
----
-```
-
----
