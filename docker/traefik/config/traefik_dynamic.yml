@@ -1,0 +1,34 @@
+http:
+  routers:
+    nginx:
+      rule: "Host(`app.local`)"
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
+      middlewares:
+        - redirect-to-https
+
+    phpmyadmin:
+      rule: "Host(`phpmyadmin.local`)"
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
+      middlewares:
+        - redirect-to-https
+
+    portainer:
+      rule: "Host(`portainer.local`)"
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
+      middlewares:
+        - redirect-to-https
+
+  middlewares:
+    redirect-to-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
