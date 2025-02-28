@@ -1,4 +1,4 @@
----
+
 
 # Projeto Base com Docker, PHP, MySQL, Traefik, phpMyAdmin e Redis
 
@@ -6,7 +6,6 @@ Este é um projeto básico configurado para facilitar o desenvolvimento com **Do
 
 > **Nota**: Este é um projeto "cru", ou seja, ele não inclui nenhuma aplicação pré-configurada. Ele serve apenas como base para ser usado em projetos PHP com suporte a banco de dados, cache e roteamento.
 
----
 
 ## Pré-requisitos
 
